@@ -1,48 +1,48 @@
-import axios from "./axios";
+import axios from './axios'
 
 // 封装常用的方法 get post put delete
-let instance = axios();
+let instance = axios()
 
 export default {
   get(url, params, headers) {
-    let options = {};
+    let options = {}
 
     if (params) {
-      options.params = params;
+      options.params = params
     }
     if (headers) {
-      options.headers = headers;
+      options.headers = headers
     }
-    return instance.get(url, options);
+    return instance.get(url, options)
   },
   post(url, params, headers, data) {
-    let options = {};
+    let options = {}
 
     if (params) {
-      options.params = params;
+      options.params = params
     }
     if (headers) {
-      options.headers = headers;
+      options.headers = headers
     }
-    return instance.post(url, data, options);
+    return instance.post(url, data, options)
   },
   put(url, params, headers) {
-    let options = {};
+    let options = {}
 
     if (headers) {
-      options.headers = headers;
+      options.headers = headers
     }
-    return instance.put(url, params, options);
+    return instance.put(url, params, options)
   },
   delete(url, params, headers) {
-    let options = {};
+    let options = {}
 
     if (params) {
-      options.params = params;
+      options.params = params
     }
     if (headers) {
-      options.headers = headers;
+      options.headers = headers
     }
-    return instance.delete(url, options);
+    return instance.delete(url, options)
   }
-};
+}
