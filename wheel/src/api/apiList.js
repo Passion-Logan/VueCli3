@@ -1,4 +1,6 @@
-// 导入所有的api文件夹
+/**
+ * api统一出口
+ */
 import test from './test'
 import test from './user'
 
