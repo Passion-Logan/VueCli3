@@ -4,45 +4,60 @@ import axios from './axios'
 let instance = axios()
 
 export default {
-  get(url, params, headers) {
+  get(url, params) {
     let options = {}
 
     if (params) {
       options.params = params
     }
-    if (headers) {
-      options.headers = headers
-    }
-    return instance.get(url, options)
+
+    return new Promise((resolve, reject) => {
+      instance
+        .get(url, options)
+        .then(res => resolve(res.data))
+        .catch(err => reject(err.data))
+    })
   },
-  post(url, params, headers, data) {
+  post(url, params) {
     let options = {}
 
     if (params) {
       options.params = params
     }
-    if (headers) {
-      options.headers = headers
-    }
-    return instance.post(url, data, options)
-  },
-  put(url, params, headers) {
-    let options = {}
 
-    if (headers) {
-      options.headers = headers
-    }
-    return instance.put(url, params, options)
+    return new Promise((resolve, reject) => {
+      instance
+        .post(url, options)
+        .then(res => resolve(res.data))
+        .catch(err => reject(res.data))
+    })
   },
-  delete(url, params, headers) {
+  put(url, params) {
     let options = {}
 
     if (params) {
       options.params = params
     }
-    if (headers) {
-      options.headers = headers
+
+    return new Promise((resolve, reject) => {
+      instance
+        .put(url, options)
+        .then(res => resolve(res.data))
+        .catch(err => reject(res.data))
+    })
+  },
+  delete(url, params) {
+    let options = {}
+
+    if (params) {
+      options.params = params
     }
-    return instance.delete(url, options)
+
+    return new Promise((resolve, reject) => {
+      instance
+        .delete(url, options)
+        .then(res => resolve(res.data))
+        .catch(err => reject(res.data))
+    })
   }
 }
