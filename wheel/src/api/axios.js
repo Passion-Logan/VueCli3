@@ -105,68 +105,16 @@ service.interceptors.response.use(
       // eg:请求超时或断网时，更新state的network状态
       // network状态在app.vue中控制着一个全局的断网提示组件的显示隐藏
       // 关于断网组件中的刷新重新获取数据，会在断网组件中说明
-      if (!window.navigator.onLine) {
-        store.commit('changeNetwork', false)
-      } else {
-        return Promise.reject(error)
-      }
+      // if (!window.navigator.onLine) {
+      //   store.commit('changeNetwork', false)
+      // } else {
+      //   return Promise.reject(error)
+      // }
     }
   }
-  // error => {
-  //   if (error.response.status) {
-  //     switch (error.response.status) {
-  //       // 401
-  //       // 未登录则跳转登录页面，并携带当前页面的路径
-  //       // 在登录成功后返回当前页面，这一步需要在登录页操作。
-  //       case 401:
-  //         router.replace({
-  //           path: '/',
-  //           query: { redirect: router.currentRoute.fullPath }
-  //         })
-  //         break
-  //       // 403 token过期
-  //       // 登录过期对用户进行提示
-  //       // 清除本地token和清空vuex中token对象
-  //       // 跳转登录页面
-  //       case 403:
-  //         this.$message({
-  //           message: '登录过期，请重新登录',
-  //           duration: 1000,
-  //           type: 'warning',
-  //           center: true
-  //         })
-  //         // 清除token
-  //         localStorage.removeItem('token')
-  //         store.commit('loginSuccess', null)
-  //         // 跳转登录页面，并将要浏览的页面fullPath传过去，登录成功后跳转需要访问的页面
-  //         setTimeout(() => {
-  //           router.replace({
-  //             path: '/login',
-  //             query: {
-  //               redirect: router.currentRoute.fullPath
-  //             }
-  //           })
-  //         }, 1000)
-  //         break
-  //       case 404:
-  //         this.$message({
-  //           message: '页面不存在!',
-  //           duration: 1000,
-  //           type: 'warning',
-  //           center: true
-  //         })
-  //         break
-  //       // 其他错误，直接抛出错误提示
-  //       default:
-  //     }
-  //     return Promise.reject(error.response)
-  //   }
-  // }
 )
 
 /**
  * 创建统一封装过的axios实例
  */
-export default function() {
-  return service
-}
+export default service
