@@ -1,4 +1,10 @@
-import api from '../index'
-import urls from './urls'
+import axios from '../axios'
+import baseUrl from '../baseUrl'
 
-export const testPost = p => api.post(urls.user, p)
+const user = {
+  testGet() {
+    return axios.get(baseUrl + '/test/hello');
+  }
+}
+
+export default user;

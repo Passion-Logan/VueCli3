@@ -29,7 +29,7 @@ export default {
       instance
         .post(url, options)
         .then(res => resolve(res.data))
-        .catch(err => reject(res.data))
+        .catch(err => reject(err.data))
     })
   },
   put(url, params) {
@@ -43,7 +43,7 @@ export default {
       instance
         .put(url, options)
         .then(res => resolve(res.data))
-        .catch(err => reject(res.data))
+        .catch(err => reject(err.data))
     })
   },
   delete(url, params) {
@@ -57,7 +57,7 @@ export default {
       instance
         .delete(url, options)
         .then(res => resolve(res.data))
-        .catch(err => reject(res.data))
+        .catch(err => reject(err.data))
     })
   }
 }

@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "start": "vue-cli-service serve",
-    "serve": "vue-cli-service serve --mode dev",
-    "dev": "vue-cli-service build --model dev",
-    "test": "vue-cli-service build --mode test",
-    "prod": "vue-cli-service build --model prod",
+    "serve": "vue-cli-service serve --model dev",
+    "dev": "vue-cli-service serve --model dev",
+    "test": "vue-cli-service serve --model test",
+    "prod": "vue-cli-service serve --model prod",
     "build": "vue-cli-service build",
+    "build:test": "vue-cli-service build --model test",
+    "build:prod": "vue-cli-service build --model prod",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
