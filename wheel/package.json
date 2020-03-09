@@ -3,11 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
-    "serve": "vue-cli-service serve --model dev",
-    "dev": "vue-cli-service serve --model dev",
-    "test": "vue-cli-service serve --model test",
-    "prod": "vue-cli-service serve --model prod",
+    "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:test": "vue-cli-service build --model test",
     "build:prod": "vue-cli-service build --model prod",
@@ -18,7 +14,7 @@
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",
