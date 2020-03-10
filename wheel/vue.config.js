@@ -4,7 +4,7 @@ module.exports = {
   lintOnSave: false, //是否开启eslint
   devServer: {
     open: true, //是否自动弹出浏览器页面
-    host: 'http://localhost',
+    host: 'localhost',
     port: '5052',
     https: false, //是否使用https协议
     hotOnly: false, //是否开启热更新
