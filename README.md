@@ -21,3 +21,5 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 [官方文档](https://cli.vuejs.org/zh/guide/)
 [Vue-Cli3.X使用教程](https://juejin.im/post/5d522d9c6fb9a06ae94d25fc)
 
+基础项目，只是封装了axios，后期添加常用组件
+
